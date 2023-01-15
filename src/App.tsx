@@ -4,9 +4,8 @@ import NavBar from "@/scenes/navbar"
 function App() {
 
   return (
-    <div className="App bg-gray-20 bg-gray-50">
-      <Navbar />
-      App
+    <div className="app bg-gray-20">
+      <NavBar />
     </div>
   )
 }
