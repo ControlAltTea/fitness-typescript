@@ -3,7 +3,7 @@ import ActionButton from "@/shared/ActionButton";
 import { SelectedPage } from "@/shared/types";
 import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
-import SponsorRedBul from "@/assets/SponsorRedBull.png";
+import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -17,15 +17,21 @@ const Home = ({ setSelectedPage }: Props) => {
 
     return (
         <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+
             {/* IMAGE AND MAIN HEADER */}
             <div className="mx-auto w-5/6 items-center justify-center md:h-5/6">
+
                 {/* MAIN HEADER */}
                 <div className="z-10 mt-32 md:basis-3/5">
+
                     {/* HEADINGS */}
                     <div className="md:-mt-20">
                         <div className="relative">
-                            <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
-                                <img src={HomePageText} alt="home-page-text" />
+                            <div className="before:absolute
+                            before:-top-20
+                            before:z-[-1]
+                            md:before:content-evolvetext">
+                                <img alt="home-page-text" src={HomePageText} />
                             </div>
                         </div>
                         <p className="mt-8 text-sm md:text-start">
@@ -35,7 +41,7 @@ const Home = ({ setSelectedPage }: Props) => {
                         </p>
                     </div>
                     {/* ACTIONS */}
-                    <div>
+                    <div className="mt-8 flex items-center gap-8">
                         <ActionButton
                             setSelectedPage={setSelectedPage}>
                             Join Now
@@ -49,16 +55,17 @@ const Home = ({ setSelectedPage }: Props) => {
                     </div>
                 </div>
                 {/* IMAGE */}
-                <div>
+                <div className="flex basis-3/5 justify-center
+                md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
                     <img src={HomePageGraphic} alt="home-pageGraphic" />
                 </div>
             </div>
             {/* SPONSORS */}
             {isAboveMediumScreens && (
-                <div>
+                <div className="h-[150px]">
                     <div>
                         <div>
-                            <img src={SponsorRedBul} alt="redbull-sponsor" />
+                            <img src={SponsorRedBull} alt="redbull-sponsor" />
                             <img src={SponsorForbes} alt="forbes-sponsor" />
                             <img src={SponsorFortune} alt="fortune-sponsor" />
                         </div>
