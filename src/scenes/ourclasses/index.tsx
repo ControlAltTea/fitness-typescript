@@ -8,6 +8,7 @@ import image6 from "@/assets/image6.png"
 import { motion } from 'framer-motion'
 import HText from '@/shared/HText'
 import { ClassType } from '@/shared/types'
+import Class from './Class'
 
 const classes: Array<ClassType> = [
     {
@@ -18,10 +19,6 @@ const classes: Array<ClassType> = [
     {
         name: "Weight Training Classes",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio dolor maxime doloribus odit velit unde quibusdam quisquam, accusantium quo molestiae natus excepturi quos ea. Vel rerum eveniet a impedit et?",
-        image: image2
-    },
-    {
-        name: "Fitness Classes",
         image: image2
     },
     {
@@ -80,7 +77,10 @@ const OurClasses = ({setSelectedPage}: Props) => {
                   <ul className='w-[2800px] whitespace-nowrap'>
                       {classes.map((item: ClassType, index) => (
                         <Class
-                          key={`${item.name}-${index}`}
+                              key={`${item.name}-${index}`}
+                              name={item.name}
+                              description={item.description}
+                              image={item.image}
                           />
                       ))}
                   </ul>
