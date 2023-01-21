@@ -18,6 +18,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     const onSubmit = async (e: any) => {
         const isValid = await trigger();
         if (!isValid) {
+            // prevents the page from refreshing
             e.preventDefault();
         }
     }
@@ -60,7 +61,11 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                       <form
                           target="_blank"
                           onSubmit={onSubmit}
-                      ></form>
+                          method="POST"
+                          action={`{https://formsubmit.com/${your@email.com}`}
+                      >
+                          
+                      </form>
                   </motion.div>
               </div>
           </motion.div>
