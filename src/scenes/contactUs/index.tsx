@@ -8,7 +8,20 @@ type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 };
 
-const ContactUs = ({setSelectedPage}: Props) => {
+const ContactUs = ({ setSelectedPage }: Props) => {
+    const {
+        register,
+        trigger,
+        formState: { errors }
+    } = useForm();
+
+    const onSubmit = async (e: any) => {
+        const isValid = await trigger();
+        if (!isValid) {
+            e.preventDefault();
+        }
+    }
+
   return (
       <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
           <motion.div onViewportEnter={()=> SelectedPage.ContactUs}>
@@ -44,6 +57,10 @@ const ContactUs = ({setSelectedPage}: Props) => {
                           visible: {opacity: 1, y: 0},
                       }}
                   >
+                      <form
+                          target="_blank"
+                          onSubmit={onSubmit}
+                      ></form>
                   </motion.div>
               </div>
           </motion.div>
