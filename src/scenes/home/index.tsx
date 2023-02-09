@@ -93,7 +93,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 {/* IMAGE */}
                 <div className="flex basis-3/5 justify-center md:z-10
               md:ml-40 md:mt-16 md:justify-items-end">
-                    <img src={HomePageGraphic} alt="home-pageGraphic" />
+                    <img src={HomePageGraphic} alt="woman figure with text that reads '100+ classes, 100+ gyms nationally'" />
                 </div>
             </motion.div>
 
