@@ -32,9 +32,6 @@ const Benefit = ({icon, title, description, setSelectedPage}: Props) => {
         </div>
         <h2 className="font-bold">{title}</h2>
         <p className="my-3">{description}</p>
-        <AnchorLink>
-              
-        </AnchorLink>
     </motion.div>
   )
 }
