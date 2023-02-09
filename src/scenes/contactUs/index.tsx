@@ -70,6 +70,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                           <label htmlFor="name">Name</label>
                           <input className={`${inputStyles}`}
                               type="text"
+                              id="name"
                               placeholder="NAME"
                               {...register("name", {
                                   required: true,
