@@ -67,6 +67,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                           method="POST"
                           action={`{https://formsubmit.com/your@email.com`}
                       >
+                          <label htmlFor="name">Name</label>
                           <input className={`${inputStyles}`}
                               type="text"
                               placeholder="NAME"
