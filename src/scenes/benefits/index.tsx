@@ -88,7 +88,7 @@ const Benefits = ({setSelectedPage}: Props) => {
           {/* GRAPHIC */}
           <img className="mx-auto"
             src={BenefitsPageGraphic}
-            alt="benefits-page-graphic" />
+            alt="second woman figure in a Calvin Klein sports bra to the left of section description" />
 
           {/* DESCRIPTION */}
           <div>
