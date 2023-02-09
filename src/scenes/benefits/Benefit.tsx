@@ -30,7 +30,7 @@ const Benefit = ({icon, title, description, setSelectedPage}: Props) => {
               {icon}
             </div>
         </div>
-        <h4 className="font-bold">{title}</h4>
+        <h2 className="font-bold">{title}</h2>
         <p className="my-3">{description}</p>
         <AnchorLink>
               
